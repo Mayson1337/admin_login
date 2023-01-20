@@ -1,0 +1,245 @@
+/*
+    ALLGEMEINE DEKORIERUNG
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color: #B22222;
+    --color_hover: #FF0000;
+    --main: #2B2B2B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(244, 244, 244);
+}
+
+body {
+    background-color: var(--main);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: var(--color);
+}
+
+a:hover {
+    color: var(--color_hover);
+}
+
+.content {
+    background-color: var(--main);
+}
+
+::-moz-selection {
+    background: var(--color);
+}
+
+::selection {
+    background: var(--color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color_hover);
+}
+
+
+/*
+LOGIN
+*/
+
+.login {
+    display: grid;
+    margin: auto;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 100vh;
+}
+
+.login button {
+    margin-top: 7.6666667%;
+    background-color: var(--color);
+    border-radius: 5px;
+}
+
+.login button:active {
+    background-color: var(--color_hover);
+}
+
+.login button:hover {
+    cursor: pointer;
+}
+
+.login #welcome {
+    font-size: 17.5px;
+}
+
+/*
+  BUTTONS ETC.
+  */
+.group {
+    position: relative;
+    margin-top: 15%;
+}
+
+.input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--color);
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--color);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: var(--color);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+
+/*
+NOTIFICATIONS
+*/
+
+.notification {
+    animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: 1vh;
+    position: relative;
+    top: 1vh;
+    left: 2vh;
+    background-color: rgb(25, 25, 25, 0.78);
+    max-width: 22vh;
+    min-height: 3vh;
+    word-wrap: break-word;
+    padding: 0.8vh;
+    border-radius: 2px;
+  
+    -webkit-box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
+  }
+  
+  .notification-title {
+    text-transform: uppercase;
+    padding: 5px 0 0 10px;
+    font-size: 1.1vh;
+    text-align: center;
+  }
+  
+  .notification-message {
+    padding-left: 10px;
+    font-size: 1.3vh;
+  }
+  
+  p {
+    color: #ffffff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
