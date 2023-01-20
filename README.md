@@ -1,6 +1,8 @@
 # admin_login
 simple admin login with mysql query
 
+ATTENTION: doesn't testet database connection!
+
 Input from UIVerse: https://uiverse.io/G4b413l/mean-stingray-9
 
 Loginscreen:
@@ -17,4 +19,4 @@ Notify config (für notify function):
 ![image](https://user-images.githubusercontent.com/99101632/213762210-8c410be4-2bfa-4853-88e6-21c3673593aa.png)
 
 
-+ notify -> notify(type, message) - Beispiel: notify("error", "Ein Fehler ist unterlaufen")
++ notify -> notify(type, message) - Example: notify("error", "Ein Fehler ist unterlaufen")
